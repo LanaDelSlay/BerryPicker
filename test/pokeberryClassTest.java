@@ -11,7 +11,7 @@ import org.junit.Test;
 
 public class pokeberryClassTest {
 
-	pokeberry pb = new pokeberry();
+	Pokeberry pb = new Pokeberry();
 	
 	
 	@Test
@@ -35,7 +35,7 @@ public class pokeberryClassTest {
 		int baseXP = 52;
 		int weight = 110;
 		int height = 6;
-		JSONObject testJSON = pokeberry.queryForJson("/pokemon/300");
+		JSONObject testJSON = Pokeberry.queryForJson("/pokemon/300");
 		
 		int baseXpFromJSON = (int) testJSON.query("/base_experience");
 		String nameFromJSON = (String) testJSON.query("/name");
@@ -50,11 +50,11 @@ public class pokeberryClassTest {
 	@Test
 	
 	public void testSorting() {
-		pokeberry myBerries = new pokeberry();
-		pokeberry godBerries = new pokeberry();
+		Pokeberry myBerries = new Pokeberry();
+		Pokeberry godBerries = new Pokeberry();
 		myBerries.setName("Sucky berries"); myBerries.setSize(35); myBerries.setSpeed(15);
 		godBerries.setName("Dank berries"); godBerries.setSize(3500); godBerries.setSpeed(5);
-		ArrayList<pokeberry> arrayList = new ArrayList<pokeberry>();
+		ArrayList<Pokeberry> arrayList = new ArrayList<Pokeberry>();
 		arrayList.add(myBerries);
 		arrayList.add(godBerries);
 		arrayList.sort(null);

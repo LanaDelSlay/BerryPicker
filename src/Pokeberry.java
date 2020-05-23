@@ -6,7 +6,7 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
-public class pokeberry implements Comparable<pokeberry>{
+public class Pokeberry implements Comparable<Pokeberry>{
 
 	private String name;
 	private int size;
@@ -15,7 +15,7 @@ public class pokeberry implements Comparable<pokeberry>{
 	
 	
 	@Override
-	public int compareTo(pokeberry pb2) {
+	public int compareTo(Pokeberry pb2) {
 		//Highest to lowest 
 		return (int) (pb2.getEfficiency() - this.getEfficiency());
 	}
