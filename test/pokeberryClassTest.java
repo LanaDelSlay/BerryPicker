@@ -31,11 +31,10 @@ public class pokeberryClassTest {
 	@Test
 	
 	public void testQuery() throws IOException {
-		String name = "skitty";
+		String name = "skitty"; //ID is 300
 		int baseXP = 52;
 		int weight = 110;
 		int height = 6;
-		
 		JSONObject testJSON = pokeberry.queryForJson("/pokemon/300");
 		
 		int baseXpFromJSON = (int) testJSON.query("/base_experience");

@@ -3,9 +3,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import org.json.JSONObject;
 
-public class main {
+public class Main {
 	public static void main(String[] args) throws IOException {
-		
 		pokeberry[] berryArry = new pokeberry[19];
 		JSONObject berryNameJson = pokeberry.queryForJson("/berry");
 		
@@ -18,13 +17,13 @@ public class main {
 			berryArry[i].setSize((int) berrySizeJson.query("/size"));
 		}
 		
-		
 		ArrayList<pokeberry> arrayList = new ArrayList<pokeberry>(Arrays.asList(berryArry));
 		arrayList.sort(null);
+		
+		//Congratulating the beareys
 		pokeberry winner = arrayList.get(0);
 		pokeberry secondPlace = arrayList.get(1);
 		pokeberry thirdPlace = arrayList.get(2);
-				
 		System.out.println(winner.getNameCapped() + " berry is the most efficient berry with an efficiency level of: " + winner.getEfficiency());
 		System.out.println(secondPlace.getNameCapped() + " berry is the second most efficient berry with an efficiency level of: " + secondPlace.getEfficiency());
 		System.out.println(thirdPlace.getNameCapped() + " berry is the third most efficient berry with an efficiency level of: " + thirdPlace.getEfficiency());
