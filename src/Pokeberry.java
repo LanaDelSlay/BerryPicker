@@ -5,7 +5,6 @@ import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
 public class Pokeberry implements Comparable<Pokeberry>{
-
 	private String name;
 	private int size;
 	private int speed;

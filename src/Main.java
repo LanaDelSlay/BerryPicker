@@ -27,7 +27,6 @@ public class Main {
 		System.out.println(winner.congratulate(1));
 		System.out.println(secondPlace.congratulate(2));
 		System.out.println(thirdPlace.congratulate(3));
-
 	}
 
 }
