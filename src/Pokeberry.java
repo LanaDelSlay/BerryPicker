@@ -1,7 +1,5 @@
 import java.io.IOException;
-
 import org.json.JSONObject;
-
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
@@ -68,9 +66,26 @@ public class Pokeberry implements Comparable<Pokeberry>{
 		return this.size;
 	}
 	
+	public String congratulate(int position) {
+		String term = "";
+		switch(position)
+		{
+			case 1:
+			 	  term = "most ";
+			 	  break;
+			 case 2:
+				  term = "second most ";
+				  break;
+			 case 3:
+				  term = "third most ";
+				  break;
+		}
+		return this.getNameCapped() + " berry is the " + term + "efficient berry with an efficiency level of: " + this.getEfficiency();
+	}
+	
 	public String toString() {
 		efficiency = size / speed;
-		return "Berry name: " + name + ".Berry size: " + size + ", Berry speed is: " + speed + ", Efficiency level: " + efficiency + "\n";
+		return "Berry name: " + name + ", Berry size: " + size + ", Berry speed is: " + speed + ", Efficiency level: " + efficiency + "\n";
 	}
 
 }

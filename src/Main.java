@@ -19,14 +19,14 @@ public class Main {
 		
 		ArrayList<Pokeberry> arrayList = new ArrayList<Pokeberry>(Arrays.asList(berryArry));
 		arrayList.sort(null);
-		
-		//Congratulating the beareys
+				
 		Pokeberry winner = arrayList.get(0);
 		Pokeberry secondPlace = arrayList.get(1);
 		Pokeberry thirdPlace = arrayList.get(2);
-		System.out.println(winner.getNameCapped() + " berry is the most efficient berry with an efficiency level of: " + winner.getEfficiency());
-		System.out.println(secondPlace.getNameCapped() + " berry is the second most efficient berry with an efficiency level of: " + secondPlace.getEfficiency());
-		System.out.println(thirdPlace.getNameCapped() + " berry is the third most efficient berry with an efficiency level of: " + thirdPlace.getEfficiency());
+		
+		System.out.println(winner.congratulate(1));
+		System.out.println(secondPlace.congratulate(2));
+		System.out.println(thirdPlace.congratulate(3));
 
 	}
 
