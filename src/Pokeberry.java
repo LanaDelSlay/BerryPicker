@@ -65,7 +65,7 @@ public class Pokeberry implements Comparable<Pokeberry>{
 		return this.size;
 	}
 	
-	public String congratulate(int position) {
+	public void congratulate(int position) {
 		String term = "";
 		switch(position)
 		{
@@ -79,7 +79,8 @@ public class Pokeberry implements Comparable<Pokeberry>{
 				  term = "third most ";
 				  break;
 		}
-		return this.getNameCapped() + " berry is the " + term + "efficient berry with an efficiency level of: " + this.getEfficiency();
+		String gz = this.getNameCapped() + " berry is the " + term + "efficient berry with an efficiency level of: " + this.getEfficiency();
+		System.out.println(gz); 
 	}
 	
 	public String toString() {

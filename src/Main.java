@@ -24,9 +24,9 @@ public class Main {
 		Pokeberry secondPlace = arrayList.get(1);
 		Pokeberry thirdPlace = arrayList.get(2);
 		
-		System.out.println(winner.congratulate(1));
-		System.out.println(secondPlace.congratulate(2));
-		System.out.println(thirdPlace.congratulate(3));
+		winner.congratulate(1);
+		secondPlace.congratulate(2);
+		thirdPlace.congratulate(3);
 	}
 
 }
